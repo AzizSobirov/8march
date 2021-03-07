@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" /><link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/3c5be74ba6.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+        <title>8 Mart Bilan</title>
+    </head>
+    <body>
+<div id="name"><div id="error"></div>
+<form class="name"><input type="name" id="input" placeholder="Iltimos ismingizni yozing."><button type="reset" onclick="sign()" id="button">Kirish</button></form>
+</div>   
+
+<div id="page1"><audio src="https://www.dropbox.com/s/112k4eknypdvqiw/4_5769494452787742027.ogg?dl=1" id="music"></audio>
+<div id="bar"><h2 id="place">Azizzi</h2><h1 class="fa fa-bars" onclick="nav()"></h1></div>
+</div><div id="nav"><ul id="list"></ul>
+<div id="close" onclick="nav()"></div>  
+</div><div id="page2">
+<ul style="justify-content:center;">
+<li><h2>Tabriklar.</h2></li></ul></div>
+<div id="page3"><ul style="justify-content:center;">
+<li><h2>She'rlar.</h2></li></ul></div>
+
+<script>       
+var login = document.getElementById("name")
+var error = document.getElementById("error")
+    var button = document.getElementById("button");    
+function sign(){ 
+var music = document.getElementById("music");
+    music.play()
+
+var name =
+document.getElementById("input").value 
+if(name.length > 3){ 
+login.classList.toggle("namee")
+error.style.display="none"
+}else{error.innerHTML= "<h4>Iltimos Ismingizni Yozing.</h4>"}
+
+var typed3 = new Typed('#place', { strings: ['Welcome!','Assalomu aleykum','Qadrli '+name,'Sizni Kirib kelgan','8-mart Xotin Qizlar bayrami','bilan chin qalbimizdan', 'tabriklaymiz.'], typeSpeed: 60, backSpeed: 40,showCursor: false, smartBackspace:true, loop:true , });
+}
+
+var wishes = [
+{
+    name:"Ziyobek",
+    wish:"Assalomu alaykum hammaga😊Hamma xotin-qizlarimizni 8-mart Xotin-qizlar bayrami bilan tabriklayman😉Ilohim bunday bayramlarni kópini kórish nasib qilsin☺️Hamma yaxshi tilaklarim sizlar uchun.Yana bir bor bayramlaringiz bilan tabriklayman.Bayramlarni yaxshi kutib olinglar👏👏👍",
+    align:"flex-start",
+    likes:"101"
+},{
+    name:"Aziz Sobirov",
+    wish:`Avvalambor Assalomu Aleykum 🖐️ <br> Kirib kelgan 8-mart Xotin-Qizlar bayrami bilan Barcha Onalarni shuningdek opa singlar va qizlarni chin qalbimdan,<br> bayram bilan tabriklayman. 🤗<br> Hech qachon yuzingizdan kulgu arimasdan doimo bizning va oila a'zolaringiz baxtiga sog'-salomat bo'lib yurishingizni tilab qolaman.😘🙂`,
+    align:"flex-end",
+    likes:"101"
+},{
+    name:"Aziz Sobirov",
+    wish:`Yuzingizdan tabassum 😊<br>
+Qalbingizdan mehr ❤️<br> hech qachon arimasin!!!<br> BAXT va OMAD sizni hech qachon tark etmasin!!!<br> SEVIB, SEVILIB yuring!!❤️<br>
+Garchi Siz bundanda ko'prog'iga loyiqsiz!!!!😍😍😍`,
+    align:"flex-start",
+    likes:"101"
+},{
+    name:"Diyorbek Boltayev",
+    wish:`Assalomu alaykum! munis ayollar, opalar, singillar!😊<br><br>
+Sizlarni 8-mart xalqaro xotin qizlar kuni🥰 <br> bayramingiz bilan chin qalbimdan tabriklayman.🥳<br><br>
+Bahoriy a'lo kayfiyat doimiy hamrohingiz bolsin!🥰`,
+    align:"flex-start",
+    likes:"101"
+},{
+    name:"Masharifjon Xushnudov",
+    wish:`Qizla silarni girib galyotirg'an bayram bilan tabrikliman shu bayramlarni ko'pini go'rish nasib atsin har doyim xurmatga sazavor inson bo'lingla, qadrli bo'lingla bayram bilan chin qalbimdan tabrikliman sog' bo'lg'aysila. `,
+    align:"flex-end",
+    likes:"101"
+},{
+    name:"Hamzabek Masharipov",
+    wish:`Assalomu alaykum.<br> Shu girib kelgan 8-mart bilan barcha xotin qizlarni bayram bilan tabriklayman. 🙂🤗<br> Doimo bizning baxtimizga sog' bo'lib yuringlar🤗<br> yuzlaringizdan kulgu arimasin.🥳`,
+    align:"flex-end"
+},{
+    name:"Shokirov Shokirjon",
+    wish:`Girib galgan 8 mart bilan hamma xotin-qizlarni tabrikliman.🥳 Bindin bayramlarini ko'pini go'rib yuringlar.🙂`,
+    align:"flex-start"
+}
+]
+var list = [
+{
+    name:"Bosh Menu",
+    href:"page1"
+},{
+    name:"Tabriklar",
+    href:"page2"
+},{
+    name:"She'rlar",
+    href:"page3"
+}
+]
+
+var lyric = [
+{
+    text:`G’am sizdan yiroq bo’lsin,<br>  
+    Tabassum hamrox bo’lsin,<br>
+    Bahordek pok umringiz,     <br> 
+    Doim quvonchga to’lsin, <br>
+    8-Mart muborak bo’lsin...<br>  
+    🌹🌹🌹🌹🌸🌹🌹🌹🌹`,
+    align:"flex-start",    icon:"https://i.imgur.com/68ZZU99.jpg"
+},{
+    text:`Erta bahor gullagan binafsha misol,<br>Ko'nglingiz doim beg'ubor bo'lsin. <br>Yangi ochilgan gul "Lola" misol, <br>Lablarizda doim tabassum bo'lsin. <br>Dildan ezgu tilaklarim sizgadir tanxo.<br> "8-MART" Ayyomingiz muborak bo'lsin!! 
+🌸🌸🌸🌸🌹🌸🌸🌸🌸
+🌸🌸🌸🌸🌹🌸🌸🌸🌸`,
+    align:"flex-end",    icon:"https://i.imgur.com/GA4JKkU.jpg"
+},{
+    text:`
+    AYOLLARGA  TILAGIMIZ... <br>
+Alloh Odam Atoga hamroh qilib momo Havvoni yaratibdiki yer yuzida xayot bor...<br> Siz  ayollar ushbu xayotning boshlanishi, baxorisiz... Siz ayollarning mexri, ishonchi, orzusi borki, bu olam yashaydi, yashnaydi,  rivojlanadi... <br> Siz bor kunning xar bir kuni bayram... 
+Aziz va muhtaram  onalarimiz, opa - singillarimiz! Sizlar baxtimizga doyim bor boʻling! Siz bor xonadonda fayz bor, baxt bor, mexr bor..!   Sizlarga ayollik baxti, sogʻliq va baxoriy kayfiyat doyimo xamrox boʻlsin!  Sizlar doyimo ardogʻimizdasiz!`,
+    align:"flex-start",    icon:"https://i.imgur.com/L3POI1I.jpg"
+},{
+    text:`Aziz opa singillar 👭 <br>
+Sof,pokiza ko'ngillar ❤<br>
+Ko'rib yayraydi dillar 👀<br>
+Bayramingiz muborak! 🌷<br><br>
+
+Siz borsiz tinch xonadon 💒<br>
+Farzandlar kular xandon 😃<br>
+Yuring bo'lib sog'-omon 💇<br>
+Bayramingiz muborak! 🌷<br><br>
+
+Chiroylisiz guldan ham ⚘<br>
+Hech kimsadan emas kam 💃<br>
+Sizla oila jamuljam 👪<br>
+Bayramingiz muborak! 🌷<br><br>
+
+Biringiz munis onam 👵<br>
+Biringiz aziz opam 👸<br>
+Yaqinim amma xolam 👵👵<br>
+Bayramingiz muborak! 🌷<br><br>
+
+Bugun sevinchga to'ling 💃<br>
+Chin qalbdan yayrab kuling 😁<br>
+Bu kun o'zingiz seving 👭<br>
+Bayramingiz muborak! 🌷<br><br>
+
+Baxtdan kulsin ko'zingiz 👀<br>
+Charaqlar yulduzingiz ☄<br>
+Deydi o'g'il qizingiz 👩‍👩‍👧‍👦<br>
+Bayramingiz muborak! 🌷<br><br>
+
+O'zingiz uchun yashang 👸<br>
+Bugun yumushni tashlang 🍽<br>
+Kiyinib yuring bashang 👗<br>
+Bayramingiz muborak! 🌷😘<br><br>
+
+Bu kun dunyo kuladi 🌎<br>
+Qalbdan dardlar yuladi. 💘<br>
+Quyosh porlab turadi 🌞<br>
+Bayramingiz muborak! ⚘<br><br>
+
+Sizlar qalbga yaqinlar ❤<br>
+Ham opa ham singillar 👩‍👧‍👧<br>
+Tark etmasin kulgular 😃😁<br>
+Bayramingiz muborak! 🌷`,
+    align:"flex-start",    icon:"https://i.imgur.com/hHaqFHQ.jpg"
+},{
+    text:`
+Ish tashvishga bugun bermay zeb<br>
+Yumushlarni bir chetga suring<br>
+Mehribonim ayyom bilan deb <br>
+Onangizni tabriklab qo'ying<br><br>
+
+Imkon bo'lsa bozorga borib <br>
+U yerdan bir dasta gul olib<br>
+Onajon deb bag'rizga bosib <br>
+Onanggizni tabriklab qo‘ying!<br><br>
+
+Duolari tushmay so‘zidan <br>
+Baxt charaqlab tursin ko‘zidan<br>
+O‘pib ikki munis yuzidan <br>
+Onanggizni tabriklab qo‘ying!<br><br>
+
+Bu hayotda bir chin do'stingiz<br>
+Ayamang hech shirin so'zingiz <br>
+Ko'rsatib bir farzandligingiz <br>
+Onangizni tabriklab qo'ying...`,
+    align:"flex-start",    icon:"https://i.imgur.com/hoPJfDz.jpg"
+}
+]
+
+function nav(){
+document.querySelector("body").classList.toggle("nav")}
+    
+var page2 = document.getElementById("page2")   ;
+for(var i=0;i<wishes.length;i++){
+  page2.innerHTML+=`<ul style="justify-content:${wishes[i].align}">
+<li><h4>${wishes[i].name}</h4>
+<h3>${wishes[i].wish}</h3></li>   
+<li id="like"><h2></h2></li>  
+  </ul>`  
+}
+for(var l=0;l<list.length;l++){
+document.getElementById("list").innerHTML+=`<a onclick="nav()" href="#${list[l].href}"><li>
+<h3>${list[l].name}</h3><h3 class="fa fa-angle-right"></h3></li></a>`
+}
+var page3 = document.getElementById("page3")   ;
+for(var c=0;c<lyric.length;c++){
+  page3.innerHTML+=`<ul style="justify-content:${lyric[c].align}">
+<li style="padding:5px;"><img src="${lyric[c].icon}">  
+<h3>${lyric[c].text}</h3></li>   
+<li id="like"><h2></h2></li>  
+  </ul>`  
+}
+</script>  
+<style>
+    :root{
+    --bg:#00adff;
+    --cl:#fff;   --bgg:linear-gradient(-45deg,var(--bg) 50%,#fff 50%);
+    --rgb:rgba(255,255,255,.55);
+    scroll-behavior:smooth;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box ;
+    font-family:"Quicksand";
+}#name{
+    position:fixed ;top:0;
+    height:100vh;width:100vw;     background:url("https://i.imgur.com/QSHBlKz.jpg");background-size:cover;
+    display:block ;z-index:3;
+}
+#name.namee{display:none;}
+.name{position:absolute ;width:100vw;
+ background:var(--rgb);padding:10px;
+display:flex;justify-content:center;
+align-items:center ;
+}#error{
+    position:fixed;top:55px;left:0;
+    height:55px;width:100vw;
+    padding:10px;
+}#name input{
+    width:65vw;height:35px;
+    outline:none;padding:5px;
+    border:2.5px solid #102626;
+    font-size:16px;font-weight:700;
+}#name button{cursor:pointer;
+    width:100px;height:35px;
+    border:none;outline:none;
+    text-transform:uppercase ;
+    background:#102626;color:#fff;
+    font-size:20px;font-weight:700;
+}
+#page1{
+    height:100vh;width:100vw;    background:url("https://i.imgur.com/sjknRpu.jpg");text-align:center ;
+    background-size:cover;
+}#bar{
+    position:fixed ;padding:10px;
+    top:0;left:0;z-index:2;
+    height:55px;width:100vw;
+    background:var(--rgb);
+    display:flex;align-items:center ;
+    justify-content:space-between;
+}
+#nav,#close{
+    position:fixed ;padding:10px;
+    top:0;height:100vh;
+    transition:0.7s;z-index:3;
+}
+#nav{left:-70vw;width:70vw;background:#fff;}
+#close{right:-30vw;width:30vw;}
+body.nav #nav{left:0vw;}
+body.nav #close{right:0vw;}
+#nav ul{padding:5px;}
+#nav li{color:#000;
+    padding:10px;display:flex;
+    align-items:center;transition:1s;
+    justify-content:space-between;
+}
+#nav li:hover{color:#ff0066;
+background:rgba(0,0,0,.15);}
+#page2 ul{
+    list-style:none;padding:10px;
+    width:100vw;background:var(--rgb);    display:flex;align-items:flex-end ;
+}
+#page2 ul li{
+    padding:10px;background:#ff0066;
+    border-radius:15px;
+}
+#page2 h4{color:#fff;}
+#like{transform:scale(1);transition:1s;position:relative;left:5px;}
+#like h2{
+    height:25px;width:25px;  
+    filter:invert(1);transition:1s; background:url("https://i.imgur.com/hhRUUwT.png");background-size:cover;
+}a{text-decoration:none;}
+#like:hover{background:#fff;
+box-shadow:0 0 0 3px #ff0066;
+transform:scale(0.8);}
+#like:hover h2{filter:invert(0);}
+#page3 #like:hover{background:#fff;
+box-shadow:0 0 0 3px #00adff;
+transform:scale(0.8);}
+#page3 ul{
+    list-style:none;padding:10px;
+    width:100vw;background:var(--rgb);        display:flex;align-items:flex-end ;
+}
+#page3 ul li{padding:10px;
+background:#00adff;
+border-radius:15px;}
+#page3 img{
+    min-height:150px;width:100%;
+    background-size:cover;
+    border-radius:15px;
+}
+</style>  
+    </body>
+</html>
