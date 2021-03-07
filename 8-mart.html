@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" /><link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/3c5be74ba6.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+        <title>8 Mart Bilan</title>
+    </head>
+    <body>
+<div id="name">
+<div id="error"></div>
+ <form class="name"> 
+<input type="name" id="input" placeholder="Iltimos ismingizni yozing."><button type="reset" onclick="sign()" id="button">Kirish</button>     
+ </form>     
+</div>   
+
+<div id="page1">
+<div id="bar"><h2 id="place">Azizzi</h2><h1 class="fa fa-bars"></h1></div>   
+<a href="#page2"><h3 class="fa fa-arrow-down"></h3></a>
+</div>
+<div id="page2">
+<ul style="justify-content:center;">
+<li><h2>Tabriklar</h2></li></ul></div>
+
+
+<script>       
+var login = document.getElementById("name")
+var error = document.getElementById("error")
+    var button = document.getElementById("button");    
+function sign(){ 
+var name =
+document.getElementById("input").value 
+if(name.length > 3){ 
+login.classList.toggle("namee")
+error.style.display="none"
+}else{error.innerHTML= "<h4>Iltimos Ismingizni Yozing.</h4>"}
+
+var typed3 = new Typed('#place', { strings: ['Welcome!','Salom '+ name,'Sizni 8-mart bilan', 'Chin qalbdan tabriklaymiz.','Hurmat bilan ','Sinfdoshlaringiz.'], typeSpeed: 70, backSpeed: 50,showCursor: false, smartBackspace:true, loop:true , });
+}
+ 
+var wishes = [
+{
+    name:"Ziyobek",
+    wish:"Assalomu alaykum hammaga😊Hamma xotin-qizlarimizni 8-mart Xotin-qizlar bayrami bilan tabriklayman😉Ilohim bunday bayramlarni kópini kórish nasib qilsin☺️Hamma yaxshi tilaklarim sizlar uchun.Yana bir bor bayramlaringiz bilan tabriklayman.Bayramlarni yaxshi kutib olinglar👏👏👍",
+    align:"flex-start",
+    likes:"101"
+},{
+    name:"Diyor",
+    wish:"Something something",
+    align:"flex-end",
+    likes:"101"
+},{
+    name:"Diyor",
+    wish:"Something something",
+    align:"flex-start",
+    likes:"101"
+},{
+    name:"Diyor",
+    wish:"Something something",
+    align:"flex-end",
+    likes:"101"
+}
+] 
+    
+var page2 = document.getElementById("page2")   ;
+for(var i=0;i<wishes.length;i++){
+  page2.innerHTML+=`<ul style="justify-content:${wishes[i].align}">
+<li><h4>${wishes[i].name}</h4>
+<h3>${wishes[i].wish}</h3></li>   
+<li id="like"><h2></h2></li>  
+  </ul>`  
+}
+</script>    
+<style>
+    :root{
+    --bg:#00adff;
+    --cl:#fff;   --bgg:linear-gradient(-45deg,var(--bg) 50%,#fff 50%);
+    --rgb:rgba(255,255,255,.55);
+    scroll-behavior:smooth;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box ;
+    font-family:"Quicksand";
+}#name{
+    position:fixed ;top:0;
+    height:100vh;width:100vw;     background:url("https://i.imgur.com/TlzIU9k.jpg");background-size:cover;
+    display:block ;z-index:3;
+}
+#name.namee{display:none;}
+.name{position:absolute ;
+    background:var(--rgb);padding:10px;
+display:flex;justify-content:center;
+align-items:center ;
+}#error{
+    position:fixed;top:55px;left:0;
+    height:55px;width:100vw;
+    padding:10px;
+}#name input{
+    width:65vw;height:35px;
+    outline:none;padding:5px;
+    border:2.5px solid #102626;
+    font-size:16px;font-weight:700;
+}#name button{cursor:pointer;
+    width:100px;height:35px;
+    border:none;outline:none;
+    text-transform:uppercase ;
+    background:#102626;color:#fff;
+    font-size:20px;font-weight:700;
+}
+
+#page1{
+    height:100vh;width:100vw;    background:url("https://i.imgur.com/6QIIdcF.jpg");text-align:center ;
+    background-size:cover;
+}#page1 h3{padding:5px;font-size:36px;
+    height:50px;width:50px;
+    border-radius:50%;background:#fff;
+    margin-top:80vh;
+    animation:anm 1s linear infinite ;
+}@keyframes anm{
+    0%{margin-top:80vh;}
+    100%{margin-top:88vh;}
+}#bar{
+    position:fixed ;padding:10px;
+    top:0;left:0;
+    height:55px;width:100vw;
+    background:var(--rgb);
+    display:flex;align-items:center ;
+    justify-content:space-between;
+}
+#page2 ul{
+    list-style:none;padding:10px;
+    width:100vw;background:var(--rgb);
+    display:flex;align-items:flex-end ;
+}
+#page2 ul li{
+    padding:10px;background:#ff0066;
+    border-radius:15px;
+}
+#page2 h4{color:#fff;}
+#like{transform:scale(1);transition:1s;
+position:relative ;left:5px;}
+#like h2{
+    height:25px;width:25px;    background:url("https://i.imgur.com/hhRUUwT.png");background-size:cover;
+}
+#like:hover{background:#fff;
+box-shadow:0 0 0 3px #ff0066;
+transform:scale(0.8);}
+</style>
+    </body>
+</html>
